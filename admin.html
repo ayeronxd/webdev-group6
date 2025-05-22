@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Admin Portal</title>
+  <link rel="stylesheet" href="admin.css" />
+</head>
+<body>
+  <div class="container">
+    <h2 id="form-title">Admin Login</h2>
+
+    <!--Form setup for future PHP/MySQL-->
+    <!--wag muna galawin action/method until PHP is used-->
+    <form id="auth-forms" action="" method="">
+      <input type="text" id="username" placeholder="Username" />
+      <input type="password" id="password" placeholder="Password" />
+      <button type="button" onclick="login()">Login</button>
+      <button type="button" onclick="signup()">Sign Up</button>
+    </form>
+
+    <div id="admin-panel" class="hidden">
+      <h2>Welcome, <span id="admin-username"></span></h2>
+
+      <form onsubmit="event.preventDefault(); createElection();" action="" method="">
+        <div class="election">
+          <h3>Create Election</h3>
+          <input type="text" id="election-name" placeholder="Election Name" />
+          <button type="submit">Create</button>
+          <ul id="election-list"></ul>
+        </div>
+      </form>
+
+      <form onsubmit="event.preventDefault(); addPosition();" action="" method="">
+        <div class="positions">
+          <h3>Manage Positions</h3>
+          <div class="form-row">
+            <select id="election-select" onchange="loadPositions()"></select>
+            <input type="text" id="position-name" placeholder="Position Name" />
+            <button type="submit">Add Position</button>
+          </div>
+          <ul id="position-list"></ul>
+        </div>
+      </form>
+
+      <form onsubmit="event.preventDefault(); addCandidate();" action="" method="">
+        <div class="candidates">
+          <h3>Manage Candidates</h3>
+          <div class="form-row">
+            <select id="position-select" onchange="loadCandidates()"></select>
+            <input type="text" id="candidate-name" placeholder="Candidate Name" />
+            <button type="submit">Add Candidate</button>
+          </div>
+          <ul id="candidate-list"></ul>
+        </div>
+      </form>
+
+      <button onclick="logout()">Logout</button>
+    </div>
+  </div>
+
+  <script src="admin.js"></script>
+</body>
+</html>
