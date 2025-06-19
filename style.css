@@ -1,0 +1,182 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  padding-top: 50px;
+  min-height: 100vh;
+  background-color: #f4f4f4;
+  margin: 0;
+}
+
+.container {
+  background: lightblue;
+  padding: 20px;
+  margin-bottom: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 320px;
+  text-align: center;
+}
+
+#user-dashboard {
+  width: 600px;
+  background: #ffffff;
+}
+
+.section {
+  margin-bottom: 30px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  background: #e7f3ff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  box-sizing: border-box;
+}
+
+button {
+  padding: 10px 20px;
+  background: #007BFF;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background 0.3s;
+}
+
+button:hover {
+  background: #0056b3;
+}
+
+.toggle {
+  margin-top: 10px;
+  color: #007BFF;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+h2 {
+  margin-bottom: 15px;
+  color: #007BFF;
+}
+
+h3 {
+  margin: 20px 0 10px;
+  color: #333;
+}
+
+#election-list {
+  margin-top: 20px;
+}
+
+#election-details {
+  margin-top: 20px;
+}
+
+.candidate-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  margin-bottom: 10px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  box-sizing: border-box;
+  gap: 10px;
+}
+
+.candidate-row span {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  text-align: left;
+}
+
+.vote-button {
+  flex-shrink: 0;
+  width: 100px;
+  padding: 8px 12px;
+  background-color: #28a745;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  text-align: center;
+}
+
+.vote-button:hover {
+  background-color: #218838;
+}
+
+.vote-button:disabled {
+  background-color: #6c757d;
+  cursor: not-allowed;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 12px;
+  border-radius: 5px;
+  border: none;
+  background: #dddddd;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+.pagination button:hover {
+  background-color: #ccc;
+}
+
+.pagination button.active-page {
+  background-color: #007BFF;
+  color: white;
+}
+
+.back-button {
+  margin-bottom: 20px;
+  background: #6c757d;
+}
+
+.back-button:hover {
+  background: #5a6268;
+}
+
+a {
+  color: #007BFF;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.already-voted {
+  background-color: #e0e0e0;
+  color: #888;
+  padding: 10px;
+  border-radius: 6px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
